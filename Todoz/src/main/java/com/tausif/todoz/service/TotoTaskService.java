@@ -10,7 +10,7 @@ import com.tausif.todoz.model.TodoTaskDto;
 @Service
 public interface TotoTaskService {
 	public TodoTask createTodoTask(TodoTaskDto todoTaskDto);
-	public void deleteTodoTask(long id);
+	public TodoTask deleteTodoTask(long id);
 	public TodoTask getTodoTask(long id);
 	public List<TodoTask> getTodoTask();
 }

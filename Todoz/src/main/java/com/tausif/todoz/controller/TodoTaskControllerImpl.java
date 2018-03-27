@@ -27,13 +27,13 @@ public class TodoTaskControllerImpl implements TodoTaskController{
 	TotoTaskServiceImpl totoTaskService;
 	
     @Override
-    public void createTodoTask(@RequestBody TodoTaskDto todoTask) {
-    	totoTaskService.createTodoTask(todoTask);
+    public TodoTask createTodoTask(@RequestBody TodoTaskDto todoTask) {
+    	return totoTaskService.createTodoTask(todoTask);
     }
     
     @Override
-    public void deleteTodoTask(@PathVariable("id") long id) {
-    	totoTaskService.deleteTodoTask(id);
+    public TodoTask deleteTodoTask(@PathVariable("id") long id) {
+    	return totoTaskService.deleteTodoTask(id);
     }
 	
     @Override

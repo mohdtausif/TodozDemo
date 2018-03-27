@@ -49,8 +49,10 @@ public class TotoTaskServiceImpl implements TotoTaskService{
     }
 	
 	@Override
-	public void deleteTodoTask(long id) {
+	public TodoTask deleteTodoTask(long id) {
+		TodoTask task = todoTaskRepository.findOne(id);
     	todoTaskRepository.delete(id);
+    	return task;
     }
 	
 	@Override

@@ -16,10 +16,10 @@ import com.tausif.todoz.model.TodoTaskDto;
 @RestController
 public interface TodoTaskController {
 	@PostMapping("/private/todotask")
-    public void createTodoTask(@RequestBody TodoTaskDto todoTask);
+    public TodoTask createTodoTask(@RequestBody TodoTaskDto todoTask);
     
     @DeleteMapping("/private/todotask/{id}")
-    public void deleteTodoTask(@PathVariable("id") long id);
+    public TodoTask deleteTodoTask(@PathVariable("id") long id);
     
     @GetMapping("/private/todotask/{id}")
 	public TodoTask getTodoTask(@PathVariable("id") long id);
